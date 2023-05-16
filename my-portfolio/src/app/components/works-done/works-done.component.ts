@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Observable, catchError } from 'rxjs';
 import { WorkModel } from 'src/app/models/work.model';
 import { WorkListService } from 'src/app/services/work-list.service';
 
@@ -23,7 +24,7 @@ export class WorksDoneComponent implements OnInit {
     this.workListService.getWorks().subscribe((workList) => { this.workList = workList});
   }
 
-  addWork(){
+  addWork(): void {
     let newId: number = this.workList.length + 1
     const newWork: WorkModel = {
       id: newId,
@@ -34,6 +35,11 @@ export class WorksDoneComponent implements OnInit {
     this.workListService.add(newWork as WorkModel).subscribe((work: WorkModel) =>{
       this.workList.push(work);
     });
+  }
+
+  removeWorkToList(workToRemove: WorkModel): void {
+    this.workListService.remove(workToRemove.id).subscribe();
+    this.getWorkList();
   }
 
 }

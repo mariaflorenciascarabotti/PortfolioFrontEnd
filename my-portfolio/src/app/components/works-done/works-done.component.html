@@ -7,4 +7,7 @@
         </svg>
     </button>
 </div>
-<app-work *ngFor="let workDataParent of workList" [workData]="workDataParent"></app-work>
+<app-work *ngFor="let workDataParent of workList" 
+    [workData]="workDataParent" 
+    (workRemove)="removeWorkToList($event)">
+</app-work>
