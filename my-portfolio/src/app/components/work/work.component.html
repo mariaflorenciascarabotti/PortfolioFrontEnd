@@ -5,7 +5,9 @@
             <h5> {{ workData.title }} </h5>
             <p class="work-description"> {{ workData.description }} </p>
         </div>
-        <app-edit></app-edit>
+        <div class="edition-container d-flex justify-content-center">
+        <app-edit [workDataIn]="workData"></app-edit>
         <app-delete (click)="deleteWork(workData)"></app-delete>
+        </div>
     </div>
 </div>
