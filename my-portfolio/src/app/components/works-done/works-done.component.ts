@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { WorkModel } from 'src/app/models/work.model';
 import { WorkListService } from 'src/app/services/work-list.service';
-import { WORKS } from 'src/assets/files/mock-works';
 
 @Component({
   selector: 'app-works-done',
@@ -21,7 +20,7 @@ export class WorksDoneComponent implements OnInit {
   }
 
   getWorkList(): void {
-    this.workList = this.workListService.getWorks();
+    this.workListService.getWorks().subscribe((workList) => { this.workList = workList});
   }
 
 }

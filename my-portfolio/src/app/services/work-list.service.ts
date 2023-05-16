@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { WorkModel } from '../models/work.model';
 import { WORKS } from 'src/assets/files/mock-works';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +12,9 @@ export class WorkListService {
 
   constructor() { }
 
-  getWorks(): WorkModel[]{
-    return this.works;
+  getWorks(): Observable<WorkModel[]>{
+    const works = of(WORKS);
+    return works;
   }
 
 
