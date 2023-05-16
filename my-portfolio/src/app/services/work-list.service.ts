@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { WorkModel } from '../models/work.model';
 import { WORKS } from 'src/assets/files/mock-works';
 import { Observable, of } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -9,12 +10,12 @@ import { Observable, of } from 'rxjs';
 export class WorkListService {
 
   works: WorkModel[] = WORKS;
+  private worksUrl = 'api/works'
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getWorks(): Observable<WorkModel[]>{
-    const works = of(WORKS);
-    return works;
+    return this.http.get<WorkModel[]>(this.worksUrl);
   }
 
 

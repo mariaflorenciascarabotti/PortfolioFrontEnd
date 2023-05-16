@@ -23,6 +23,6 @@ export const WORKS:WorkModel[] = [
       "id": 4,
       "title": "Cuarto trabajo",
       "urlImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCqscj-HDlmxCQm8BKNI3XLE-FU9o5d-HySDdNf1SdS19yL6wYpyExFTbUxsafCSNhcD0&usqp=CAU",
-      "description": "No me encantó este trabajo"
+      "description": "No me gustó este trabajo"
     }
 ];
