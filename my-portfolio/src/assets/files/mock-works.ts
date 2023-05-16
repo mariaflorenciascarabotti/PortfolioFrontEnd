@@ -1,3 +1,5 @@
+//esto ya lo podemos boorar ya que usamos la api/work
+
 import { WorkModel } from "src/app/models/work.model";
 
 export const WORKS:WorkModel[] = [

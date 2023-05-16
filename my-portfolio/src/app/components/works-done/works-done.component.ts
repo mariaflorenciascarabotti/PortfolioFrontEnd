@@ -23,4 +23,6 @@ export class WorksDoneComponent implements OnInit {
     this.workListService.getWorks().subscribe((workList) => { this.workList = workList});
   }
 
+  addWork(){}
+
 }
