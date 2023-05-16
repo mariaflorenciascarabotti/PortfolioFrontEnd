@@ -15,6 +15,7 @@ import { InMemoryDataService} from './services/in-memory-data.service';
 import { DeleteComponent } from './components/delete/delete.component';
 import { EditComponent } from './components/edit/edit.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -32,6 +33,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }

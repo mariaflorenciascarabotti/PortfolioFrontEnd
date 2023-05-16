@@ -11,20 +11,20 @@
 	</div>
     <form class="modal-body">
         <div class="form-floating mb-4">
-            <input type="text" class="form-control" id="floatingImage" placeholder="http://www.urlimageexample.com" name="urlImage">
+            <input type="text" class="form-control" id="floatingImage" placeholder="http://www.urlimageexample.com" name="urlImage" [ngModel]="workDataIn.urlImage">
             <label for="floatingImage">Image address</label>
         </div>
         <div class="form-floating mb-4">
-            <input type="text" class="form-control" id="floatingTitle" placeholder="Titulo" name="title">
+            <input type="text" class="form-control" id="floatingTitle" placeholder="Titulo" name="title" [ngModel]="workDataIn.title">
             <label for="floatingTitle">Título</label>
         </div>
         <div class="form-floating mb-4">
-            <textarea class="form-control" placeholder="Coloca una descripción" id="floatingTextarea" rows="10" name="description"></textarea>
+            <textarea class="form-control" placeholder="Coloca una descripción" id="floatingTextarea" rows="10" name="desc" [ngModel]="workDataIn.description"></textarea>
             <label for="floatingTextarea">Descripción</label>
         </div>
         <div class="modal-footer">
             <button type="submit" class="btn btn-success">Update</button>
+            <button type="button" class="btn btn-secondary" (click)="modal.close('Close click')">Close</button>
         </div>
-
     </form>
 </ng-template>
