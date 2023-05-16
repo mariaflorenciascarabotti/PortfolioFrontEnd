@@ -5,6 +5,7 @@
             <h5> {{ workData.title }} </h5>
             <p class="work-description"> {{ workData.description }} </p>
         </div>
+        <app-edit></app-edit>
         <app-delete (click)="deleteWork(workData)"></app-delete>
     </div>
 </div>

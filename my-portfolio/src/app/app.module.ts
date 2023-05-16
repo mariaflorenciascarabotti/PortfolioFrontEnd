@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService} from './services/in-memory-data.service';
 import { DeleteComponent } from './components/delete/delete.component';
+import { EditComponent } from './components/edit/edit.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { DeleteComponent } from './components/delete/delete.component';
     AboutComponent,
     WorksDoneComponent,
     WorkComponent,
-    DeleteComponent
+    DeleteComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
